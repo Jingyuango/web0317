@@ -26,11 +26,16 @@ MODELS = {
 }
 
 
+loaded_models = {}
 try:
-    model = joblib.load(MODELS)
+    for model_name, model_path in MODELS.items():
+        loaded_models[model_name] = joblib.load(model_path)
+    st.success("所有模型加载成功！")
 except Exception as e:
     st.error(f"模型加载失败：{str(e)}")
     st.stop()
+
+    
 # 侧边栏输入
 st.sidebar.header("⚙️ 输入参数")
 with st.sidebar.expander("基础参数", expanded=True):
