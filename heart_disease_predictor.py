@@ -25,6 +25,12 @@ MODELS = {
     'EY': 'EY综合.pkl'
 }
 
+
+try:
+    model = joblib.load(MODELS)
+except Exception as e:
+    st.error(f"模型加载失败：{str(e)}")
+    st.stop()
 # 侧边栏输入
 st.sidebar.header("⚙️ 输入参数")
 with st.sidebar.expander("基础参数", expanded=True):
