@@ -1,3 +1,15 @@
+<<<<<<< HEAD
 version https://git-lfs.github.com/spec/v1
-oid sha256:0bea80e62aa2a84f17e407affe796b978a15fcc8f853bcf1c68cbd2cb677e9c2
-size 334
+oid sha256:9678a77ca5d76f2b6f1a66f71469f2b57db7dccb734b93898fba0fe52361d390
+size 135
+=======
+streamlit==1.30.0
+joblib==1.4.2
+numpy==1.26.4
+pandas==2.2.2
+matplotlib==3.8.0
+xgboost==2.0.3
+scikit-learn==1.4.2
+pywaffle==0.6.0
+shap==0.45.1
+>>>>>>> 90a13b7f681ae3bee1a5ac236ef6306b8ec99f17
