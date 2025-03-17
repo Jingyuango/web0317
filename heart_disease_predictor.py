@@ -13,17 +13,20 @@ st.set_page_config(
 )
 
 # 模型路径
+import os
+
 MODEL_PATHS = {
-    'C': 'C综合.pkl',
-    'H': 'H综合.pkl',
-    'O': 'O综合.pkl',
-    'N': 'N综合.pkl',
-    'FC': 'FC综合.pkl',
-    'VM': 'VM综合.pkl',
-    'ASH': 'ASH综合.pkl',
-    'HHV': 'HHV综合.pkl',
-    'EY': 'EY综合.pkl'
+    'C': os.path.join(os.path.dirname(__file__), 'C综合.pkl'),
+    'H': os.path.join(os.path.dirname(__file__), 'H综合.pkl'),
+    'O': os.path.join(os.path.dirname(__file__), 'O综合.pkl'),
+    'N': os.path.join(os.path.dirname(__file__), 'N综合.pkl'),
+    'FC': os.path.join(os.path.dirname(__file__), 'FC综合.pkl'),
+    'VM': os.path.join(os.path.dirname(__file__), 'VM综合.pkl'),
+    'ASH': os.path.join(os.path.dirname(__file__), 'ASH综合.pkl'),
+    'HHV': os.path.join(os.path.dirname(__file__), 'HHV综合.pkl'),
+    'EY': os.path.join(os.path.dirname(__file__), 'EY综合.pkl')
 }
+
 
 # 加载模型函数
 @st.cache_resource
@@ -131,7 +134,7 @@ if st.button("🚀 开始预测"):
 
 # 数据说明
 with st.expander("📚 数据与公式说明", expanded=False):
-    st.markdown("""
+    st.markdown(r"""
     **输入参数说明：**
     - **C/H/O/N (%)**: 燃料元素含量百分比
     - **FC/VM/ASH (%)**: 固定碳、挥发分、灰分含量
